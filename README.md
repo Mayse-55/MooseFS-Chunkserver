@@ -40,6 +40,12 @@ nano /etc/mfs/mfschunkserver.cfg
 # Configurer le nom du master dans /etc/hosts si nécessaire
 nano /etc/hosts
 
+# Ajouter mfsmount dans /etc/fstab
+nano /etc/fstab
+
+#MooseFS
+mfsmount        /mnt/moosefs_data                           fuse    mfsmaster=mfsmaster,mfsport=9421,_netdev,nonempty
+
 # Activer et démarrer les services
 systemctl daemon-reload
 systemctl enable moosefs-chunkserver.service
