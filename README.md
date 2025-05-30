@@ -86,7 +86,7 @@ sudo nano /etc/hosts
 Ajouter par exemple :
 
 ```bash
-192.168.1.10   mfsmaster
+192.168.1.10 npx-1.lan npx-1 mfsmaster
 ```
 
 ## 🔁 Monter automatiquement MooseFS au démarrage
