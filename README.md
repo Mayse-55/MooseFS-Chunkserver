@@ -19,3 +19,72 @@
 lvremove /dev/pve/data
 lvresize -l +100%FREE /dev/pve/root
 resize2fs /dev/mapper/pve-root
+```
+
+## 🐂 Ajouter les dépôts MooseFS
+
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl https://repository.moosefs.com/moosefs.key | \
+  gpg -o /etc/apt/keyrings/moosefs.gpg --dearmor
+
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/moosefs.gpg] http://repository.moosefs.com/moosefs-4/apt/debian/bookworm bookworm main" | \
+  sudo tee /etc/apt/sources.list.d/moosefs.list
+```
+
+## 🔄 Mise à jour du système
+
+```bash
+sudo apt update
+sudo apt dist-upgrade -y
+sudo apt autoremove -y
+```
+
+## 📦 Installation des paquets nécessaires
+
+```bash
+sudo apt install -y moosefs-client moosefs-chunkserver moosefs-metalogger dfc
+```
+
+## 📁 Préparer les répertoires de données
+
+```bash
+sudo mkdir -p /mnt/moosefs_chunks
+sudo mkdir -p /mnt/moosefs_data
+sudo mkdir -p /var/lib/mfs
+
+sudo chown -R mfschunkserver:mfschunkserver /mnt/moosefs_chunks
+sudo chown -R mfschunkserver:mfschunkserver /var/lib/mfs
+```
+
+## 🛠️ Configuration des fichiers MooseFS
+
+# 📌 1. Définir le disque des chunks
+
+```bash
+sudo nano /etc/mfs/mfshdd.cfg
+```
+
+Ajouter :
+
+```bash
+/mnt/moosefs_chunks
+```
+
+# 📌 2. Vérifier la configuration du chunkserver
+
+```bash
+sudo nano /etc/mfs/mfschunkserver.cfg
+```
+
+## 📇 Configurer le fichier /etc/hosts
+
+```bash
+sudo nano /etc/hosts
+```
+
+Ajouter par exemple :
+
+```bash
+192.168.1.10   mfsmaster
+```
