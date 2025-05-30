@@ -1,58 +1,21 @@
-# 🐮 Installation et configuration de MooseFS (Client + Chunkserver)
+# 🐘 Installation d'un Chunkserver MooseFS (Debian 12)
 
-## 🔧 Étapes rapides
+## 🧾 Prérequis
+
+* 🖥️ Système : **Debian 12**
+* 🔐 Accès `sudo` ou root
+* 🧠 Serveur MooseFS Master déjà fonctionnel
+* 💽 Un disque dur supplémentaire pour le stockage des chunks
+
+> [!caution]
+> ✅ Cette documentation a été **testée et validée** sur une machine virtuelle Proxmox sous **Debian 12**.  
+> ❌ Si vous rencontrez des problèmes, vérifiez votre configuration réseau, DNS et vos disques.
+
+---
+
+## 🧹 (Optionnel) Étendre la partition root (si nécessaire)
 
 ```bash
-# (Optionnel) Étapes de gestion de disque (à faire si tu veux étendre la partition root)
 lvremove /dev/pve/data
 lvresize -l +100%FREE /dev/pve/root
 resize2fs /dev/mapper/pve-root
-
-# Ajouter les dépôts MooseFS
-mkdir -p /etc/apt/keyrings
-curl https://repository.moosefs.com/moosefs.key | gpg -o /etc/apt/keyrings/moosefs.gpg --dearmor
-echo "deb [arch=amd64 signé par=/etc/apt/keyrings/moosefs.gpg] http://repository.moosefs.com/moosefs-4/apt/debian/bookworm bookworm main" | sudo tee /etc/apt/sources.list.d/moosefs.list
-
-# Mise à jour système
-apt update
-apt dist-upgrade -y
-apt autoremove -y
-
-# Installation des paquets nécessaires
-apt install moosefs-client moosefs-chunkserver moosefs-metalogger dfc -y
-
-# Création des dossiers de montage
-mkdir -p /mnt/moosefs_chunks
-mkdir -p /mnt/moosefs_data
-mkdir -p /var/lib/mfs
-
-# Définir les bons droits
-chown -R mfschunkserver:mfschunkserver /mnt/moosefs_chunks
-chown -R mfschunkserver:mfschunkserver /var/lib/mfs
-
-# Configurer le disque MooseFS (chunk)
-nano /etc/mfs/mfshdd.cfg
-# ➜ Ajouter : /mnt/moosefs_chunks
-
-# Configurer le fichier du chunkserver si besoin
-nano /etc/mfs/mfschunkserver.cfg
-
-# Configurer le nom du master dans /etc/hosts si nécessaire
-nano /etc/hosts
-
-# Ajouter mfsmount dans /etc/fstab
-nano /etc/fstab
-
-#MooseFS
-mfsmount        /mnt/moosefs_data                           fuse    mfsmaster=mfsmaster,mfsport=9421,_netdev,nonempty
-
-# Activer et démarrer les services
-systemctl daemon-reload
-systemctl enable moosefs-chunkserver.service
-systemctl start moosefs-chunkserver.service
-systemctl status moosefs-chunkserver.service
-
-# (Optionnel) Activer le metalogger si nécessaire
-systemctl enable moosefs-metalogger
-systemctl start moosefs-metalogger
-systemctl status moosefs-metalogger
