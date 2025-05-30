@@ -59,7 +59,7 @@ sudo chown -R mfschunkserver:mfschunkserver /var/lib/mfs
 
 ## 🛠️ Configuration des fichiers MooseFS
 
-# 📌 1. Définir le disque des chunks
+### 📌 1. Définir le disque des chunks
 
 ```bash
 sudo nano /etc/mfs/mfshdd.cfg
@@ -71,7 +71,7 @@ Ajouter :
 /mnt/moosefs_chunks
 ```
 
-# 📌 2. Vérifier la configuration du chunkserver
+### 📌 2. Vérifier la configuration du chunkserver
 
 ```bash
 sudo nano /etc/mfs/mfschunkserver.cfg
