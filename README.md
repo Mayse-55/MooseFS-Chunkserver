@@ -1,4 +1,4 @@
-# 🐘 Installation d'un Chunkserver MooseFS (Debian 12)
+# 🐘 Installation d'un Chunkserver MooseFS
 
 ## 🧾 Prérequis
 
