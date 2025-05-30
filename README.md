@@ -88,3 +88,32 @@ Ajouter par exemple :
 ```bash
 192.168.1.10   mfsmaster
 ```
+
+## 🔁 Monter automatiquement MooseFS au démarrage
+
+```bash
+sudo nano /etc/fstab
+```
+
+Ajouter au début : 
+
+```bash
+#MooseFS
+mfsmount        /mnt/moosefs_data   fuse    mfsmaster=mfsmaster,mfsport=9421,_netdev,nonempty   0 0
+```
+
+## 🚀 Activer et démarrer les services
+
+```bash
+sudo systemctl daemon-reload
+
+# Chunkserver
+sudo systemctl enable moosefs-chunkserver.service
+sudo systemctl start moosefs-chunkserver.service
+sudo systemctl status moosefs-chunkserver.service
+
+# Metalogger (optionnel)
+sudo systemctl enable moosefs-metalogger
+sudo systemctl start moosefs-metalogger
+sudo systemctl status moosefs-metalogger
+```
