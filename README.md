@@ -1,5 +1,5 @@
 # 🐘 Installation d'un Chunkserver MooseFS
-[![MooseFS](https://img.shields.io/badge/MooseFS-Distributed%20FS-yellowgreen?style=flat-square&logo=linux)](https://moosefs.com/)
+[![MooseFS]([https://img.shields.io/badge/MooseFS-Distributed%20FS-yellowgreen?style=flat-square&logo=linux](https://duckduckgo.com/?q=Moose%20File%20System%20Software&ia=images&iax=images))](https://moosefs.com/)
 
 ## 🧾 Prérequis
 
