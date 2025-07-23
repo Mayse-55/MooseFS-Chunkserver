@@ -72,7 +72,7 @@ sudo nano /etc/mfs/mfshdd.cfg
 /mnt/moosefs_chunks
 ```
 
-**Utilisation :** MooseFS utilisera tout l'espace disponible sur le disque, moins l'espace de sécurité par défaut.
+**MooseFS** utilisera tout l'espace disponible sur le disque, moins l'espace de sécurité par défaut.
 
 ### Ou Pour un disque avec système (partage avec d'autres données)
 
@@ -82,7 +82,7 @@ sudo nano /etc/mfs/mfshdd.cfg
 # 100GiB dépend de votre configuration matérielle et de vos besoins.
 ```
 
-**Utilisation :** MooseFS utilisera exactement 100GiB sur ce disque, laissant le reste pour le système ou d'autres applications.
+**MooseFS** utilisera 100GiB sur ce disque, laissant le reste pour le système ou d'autres applications.
 
 ### 📌 2. Vérifier la configuration du chunkserver
 
