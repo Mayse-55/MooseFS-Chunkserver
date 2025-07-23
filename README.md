@@ -79,7 +79,7 @@ sudo nano /etc/mfs/mfshdd.cfg
 ```bash
 /mnt/moosefs_chunks =100GiB 
 
-#100GiB dépend de votre configuration matérielle et de vos besoins.
+# 100GiB dépend de votre configuration matérielle et de vos besoins.
 ```
 
 **Utilisation :** MooseFS utilisera exactement 100GiB sur ce disque, laissant le reste pour le système ou d'autres applications.
