@@ -77,7 +77,6 @@ sudo nano /etc/mfs/mfshdd.cfg
 ### Ou Pour un disque avec système (partage avec d'autres données)
 
 ```bash
-# 100GiB est un exemple
 /mnt/moosefs_chunks =100GiB
 ```
 
