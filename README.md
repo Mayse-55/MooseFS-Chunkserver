@@ -74,9 +74,7 @@ sudo nano /etc/mfs/mfshdd.cfg
 
 **Utilisation :** MooseFS utilisera tout l'espace disponible sur le disque, moins l'espace de sécurité par défaut.
 
-Ou
-
-### Pour un disque avec système (partage avec d'autres données)
+### Ou Pour un disque avec système (partage avec d'autres données)
 
 ```bash
 /mnt/moosefs_chunks 100GiB
