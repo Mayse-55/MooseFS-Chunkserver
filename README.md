@@ -66,11 +66,25 @@ sudo chown -R mfschunkserver:mfschunkserver /var/lib/mfs
 sudo nano /etc/mfs/mfshdd.cfg
 ```
 
-Ajouter :
+### Pour un disque vide (dédié entièrement à MooseFS)
 
 ```bash
 /mnt/moosefs_chunks
 ```
+
+**Utilisation :** MooseFS utilisera tout l'espace disponible sur le disque, moins l'espace de sécurité par défaut.
+
+---
+
+### Pour un disque avec système (partage avec d'autres données)
+
+```bash
+/mnt/moosefs_chunks 100GiB
+```
+
+**Utilisation :** MooseFS utilisera exactement 100GiB sur ce disque, laissant le reste pour le système ou d'autres applications.
+
+---
 
 ### 📌 2. Vérifier la configuration du chunkserver
 
