@@ -7,7 +7,7 @@
 * Serveur MooseFS Master déjà fonctionnel et accessible
 * Un disque dur dédié ou de l'espace disponible pour le stockage des chunks
 
-> [!warning]
+> [!caution]
 > Cette documentation a été testée et validée sur une machine virtuelle Proxmox sous Debian 12 et 13.  
 > En cas de problème, vérifiez votre configuration réseau, DNS et vos disques.
 
