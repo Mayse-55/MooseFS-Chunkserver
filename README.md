@@ -54,8 +54,8 @@ sudo mkdir -p /mnt/moosefs_chunks
 sudo mkdir -p /mnt/moosefs_data
 sudo mkdir -p /var/lib/mfs
 
-sudo chown -R mfschunkserver:mfschunkserver /mnt/moosefs_chunks
-sudo chown -R mfschunkserver:mfschunkserver /var/lib/mfs
+sudo chown -R mfs:mfs /mnt/moosefs_chunks
+sudo chown -R mfs:mfs /var/lib/mfs
 ```
 
 ## 🛠️ Configuration des fichiers MooseFS
