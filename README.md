@@ -103,8 +103,6 @@ MooseFS utilisera tout l'espace disponible avec une marge de sécurité par déf
 
 MooseFS limitera son utilisation à 100 GiB. Ajustez cette valeur selon vos besoins.
 
-> **Recommandation :** Utilisez XFS comme système de fichiers sous-jacent pour les partitions de stockage de chunks afin d'obtenir des performances optimales.
-
 ### 6.2. Vérification de la configuration
 
 ```bash
