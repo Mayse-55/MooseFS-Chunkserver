@@ -302,8 +302,6 @@ Pour optimiser les performances :
 - Dépôt GitHub : https://github.com/moosefs/moosefs
 - Support technique : support@moosefs.com
 
-> **Documentation Master Server :** Pour l'installation du serveur Master, consultez : [https://github.com/Mayse-55/MooseFS-Master](https://github.com/Mayse-55/MooseFS-Master)
-
 ---
 
 ## 16. Informations légales
