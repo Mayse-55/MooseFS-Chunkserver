@@ -11,6 +11,9 @@
 > Cette documentation a été testée et validée sur une machine virtuelle Proxmox sous Debian 12 et 13.  
 > En cas de problème, vérifiez votre configuration réseau, DNS et vos disques.
 
+> **Documentation Master Server :**  
+> Pour l'installation du serveur Master, consultez : [https://github.com/Mayse-55/MooseFS-Master](https://github.com/Mayse-55/MooseFS-Master)
+
 ---
 
 ## 1. Extension de la partition root (optionnel)
