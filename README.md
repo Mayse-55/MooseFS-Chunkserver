@@ -35,8 +35,7 @@ sudo mkdir -p /etc/apt/keyrings
 curl https://repository.moosefs.com/moosefs.key | \
   gpg -o /etc/apt/keyrings/moosefs.gpg --dearmor
 
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/moosefs.gpg] http://repository.moosefs.com/moosefs-4/apt/debian/bookworm bookworm main" | \
-  sudo tee /etc/apt/sources.list.d/moosefs.list
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/moosefs.gpg] http://repository.moosefs.com/moosefs-4/apt/debian/trixie trixie main" > /etc/apt/sources.list.d/moosefs.list
 ```
 
 ---
