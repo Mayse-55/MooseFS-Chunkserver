@@ -3,7 +3,7 @@
 
 ## 🧾 Prérequis
 
-* 🖥️ Système : **Debian 12**
+* 🖥️ Système : **Debian 12 et Debian 13**
 * 🔐 Accès `sudo` ou root
 * 🧠 Serveur MooseFS Master déjà fonctionnel
 * 💽 Un disque dur supplémentaire pour le stockage des chunks
