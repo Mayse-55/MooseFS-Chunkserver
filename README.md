@@ -309,8 +309,15 @@ Pour optimiser les performances :
 
 ---
 
-## 16. Informations légales
+## Licence
 
-MooseFS est distribué sous licence GPL v2.
+Cette documentation est sous licence [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr).
 
-Copyright 2008-2025 Jakub Kruszona-Zawadzki, Saglabs SA
+Vous êtes libre de :
+- Partager — copier, distribuer et communiquer le matériel
+- Adapter — remixer, transformer et créer à partir du matériel pour toute utilisation, y compris commerciale
+
+Selon les conditions suivantes :
+- Attribution — Vous devez créditer l'œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées.
+
+© 2026 Nathaël Polnecq
