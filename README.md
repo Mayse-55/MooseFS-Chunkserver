@@ -309,6 +309,12 @@ Pour optimiser les performances :
 
 ---
 
+## 16. Informations légales
+
+MooseFS est distribué sous licence GPL v2.
+
+---
+
 ## Licence
 
 Cette documentation est sous licence [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr).
